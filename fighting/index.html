@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stickman Fighter</title>
+    <style>
+        body { 
+            margin: 0;
+            background: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        canvas {
+            border: 2px solid #fff;
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+    <script src="src/systems/InputSystem.js"></script>
+    <script src="src/characters/Fighter.js"></script>
+    <script src="src/Game.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            try {
+                console.log('Starting game initialization...');
+                const game = new FightingGame();
+                console.log('Game initialized successfully');
+            } catch (error) {
+                console.error('Error initializing game:', error);
+            }
+        });
+    </script>
+</body>
+</html> 
